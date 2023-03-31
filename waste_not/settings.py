@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = ["https://waste-not-app.netlify.app/",
+CORS_ORIGIN_WHITELIST = ["https://waste-not-app.netlify.app",
   "http://localhost:3000",
   "http://localhost:8000"
 ]
