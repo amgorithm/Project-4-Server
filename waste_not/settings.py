@@ -101,9 +101,18 @@ WSGI_APPLICATION = 'waste_not.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-     "default":  
-     dj_database_url.config(default=os.environ["DATABASE_URL"])
+# DATABASES = {
+#      "default":  
+#      dj_database_url.config()
+# }
+
+DATABASES = {  # added this to use postgres as the databse instead of the default sqlite. do this before running the initial migrations or you will need to do it again
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'waste_not',
+        'HOST': 'localhost',
+        'PORT': 5432
+    }
 }
 
 REST_FRAMEWORK = {
